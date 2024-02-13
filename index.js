@@ -49,7 +49,7 @@ function init() {
   inquirer.prompt(questions).then((response) => {
     const fileName = "./examples/logo.svg";
     const svgCode = renderLogo(response);
-    console.log(svgCode);
+    console.log(`Generated ${fileName}`);
     fs.writeFile(fileName, svgCode, (err) => {
       err ? console.log(err) : console.log("Success!");
     });
