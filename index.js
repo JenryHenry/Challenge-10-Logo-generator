@@ -34,11 +34,11 @@ function renderLogo(input) {
   const letterColor = input.letterColor;
   let shape;
   if (selectedShape == "Triangle") {
-    shape = new Triangle(shapeColor);
+    shape = new Triangle(shapeColor).render();
   } else if (selectedShape == "Square") {
-    shape = new Square(shapeColor);
+    shape = new Square(shapeColor).render();
   } else {
-    shape = new Circle(shapeColor);
+    shape = new Circle(shapeColor).render();
   }
   const logo = new Logo(shape, letters, letterColor);
 
@@ -47,7 +47,7 @@ function renderLogo(input) {
 
 function init() {
   inquirer.prompt(questions).then((response) => {
-    const fileName = "./examples/newLogo.svg";
+    const fileName = "./examples/logo.svg";
     const svgCode = renderLogo(response);
     console.log(svgCode);
     fs.writeFile(fileName, svgCode, (err) => {
