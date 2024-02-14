@@ -22,6 +22,8 @@ To use this application follow these steps:
 - Third, type "node index.js" into the command line, and answer the prompts.
 - Finally, navigate into the "examples" folder to find your newly generated logo.svg logo file!
 
+This is how the application should work: https://drive.google.com/file/d/1MnZS3qxSKQwQ506Oqi6GEEXUf_tAPICJ/view?usp=drive_link
+
 ## License
 
 This application uses an MIT license. Please refer to the LICENSE file in the repo.
